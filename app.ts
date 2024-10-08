@@ -1,14 +1,28 @@
 // Object Type
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string]; // Tuple : exactly array of 2 values and 2 types
-} = {
+// const person: {
+//   name: string;
+//   age: number;
+//   hobbies: string[];
+//   role: [number, string]; // Tuple : exactly array of 2 values and 2 types
+// } = {
+//   name: "Bruno",
+//   age: 27,
+//   hobbies: ["gaming", "sports"],
+//   role: [2, "author"],
+// };
+
+// enum definition : upper case for custom type
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
+};
+
+const person = {
   name: "Bruno",
   age: 27,
   hobbies: ["gaming", "sports"],
-  role: [2, "author"],
+  role: Role.ADMIN,
 };
 
 // An array of string values
