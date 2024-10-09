@@ -8,3 +8,11 @@ if (typeof userInput === "string") {
   // doesn't error as the check for string above
   username = userInput;
 }
+
+// Never Type
+function generateError(message: string, code: number): never {
+  // Doesn't produce a return value so never return type
+ throw { message: message, code: code };
+}
+
+generateError("Error occured!", 500);
