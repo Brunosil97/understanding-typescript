@@ -1,39 +1,16 @@
-// Object Type
-// const person: {
-//   name: string;
-//   age: number;
-//   hobbies: string[];
-//   role: [number, string]; // Tuple : exactly array of 2 values and 2 types
-// } = {
-//   name: "Bruno",
-//   age: 27,
-//   hobbies: ["gaming", "sports"],
-//   role: [2, "author"],
-// };
-
-// enum definition : upper case for custom type
-enum Role {
-  ADMIN,
-  READ_ONLY,
-  AUTHOR,
-};
-
-const person = {
-  name: "Bruno",
-  age: 27,
-  hobbies: ["gaming", "sports"],
-  role: Role.ADMIN,
-};
-
-// An array of string values
-let favouriteActivities: string[];
-favouriteActivities = ["Football", "Rugby"];
-
-console.log(person.name);
-
-for(const hobby of person.hobbies) {
-  // Detects that hobbies will be an array of strings
-  // can access string functions
-  console.log(hobby.toUpperCase());
-  // hooby.map() would throw an error as it should
+// Union Types
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 === 'number' && typeof input2 === 'number') {
+    result = input1 + input2;
+  }
+  
+  if (typeof input1 === 'string' && typeof input2 === 'string') {
+    result = input1.toString() + input2.toString();
+  }
+  return result;
 }
+
+const combineAge = combine(27, 26);
+
+const combineName = combine("Bruno", "Silva");
