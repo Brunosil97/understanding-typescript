@@ -1,9 +1,11 @@
-// Rest paramaters
-// Can accept an unlimted amount of arguments
-const restAdd = (...numbers: number[]): number => {
-  return numbers.reduce((currentResult, currentValue) => {
-    return currentResult + currentValue;
-  }, 0)
+// Classes
+class Department {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
 };
 
-const addedNumbers = restAdd(5, 10, 15, 20);
+const accounting = new Department("Accounting");
+console.log(accounting);
