@@ -1,5 +1,5 @@
 // Function return Types & "Void"
-function add(n1: number, n2: number): number {
+function addNumbers(n1: number, n2: number): number {
   return n1 + n2;
 }
 
@@ -7,12 +7,12 @@ function printResult(num: number): void {
   console.log("Result:" + num);
 }
 
-printResult(add(5, 2));
+printResult(addNumbers(5, 2));
 
 // Function Type
 let combineValues: (a: number, b: number) => number;
 
-combineValues = add;
+combineValues = addNumbers;
 
 console.log(combineValues(8, 8));
 
